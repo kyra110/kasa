@@ -3,10 +3,10 @@ const Navigation = () => {
   return (
     <div className="navigation">
       <ul>
-        <NavLink to ="/">
+        <NavLink to ="/Accueil">
           <li>Accueil</li>
         </NavLink>
-        <NavLink to ="/about">
+        <NavLink to ="/Apropos">
           <li>A propos</li>
         </NavLink>
       </ul>
