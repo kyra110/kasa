@@ -1,20 +1,18 @@
-import "../sass/main.scss"
-import Header from "./Header"
-import BannerImg from "./BannerImg"
-import Gallery from "./Gallery"
-import Footer from "./Footer"
+import About from "../pages/About";
+import Home from "../pages/Home";
+import Error from "../pages/Error";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 function App() {
-
-
   return (
-    <div className="app">
-      <Header/>
-      <BannerImg/> 
-      <Gallery/>
-      <Footer/>
-    </div>
-    
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<Error/>} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

@@ -6,7 +6,8 @@
   border-radius: 1.5625rem;
   background: #F6F6F6;
   height: 223px;
-  margin-bottom: 50px;
+  max-width: 1240px;
+  margin: 0 auto;
   @media screen and (max-width:1024px) {
     height: 200px;
    }
