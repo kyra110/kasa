@@ -3,7 +3,7 @@ const Navigation = () => {
   return (
     <div className="navigation">
       <ul>
-        <NavLink to ="/Accueil">
+        <NavLink to ="/">
           <li>Accueil</li>
         </NavLink>
         <NavLink to ="/Apropos">
