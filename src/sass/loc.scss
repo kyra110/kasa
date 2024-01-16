@@ -1,0 +1,104 @@
+.loc {
+  margin-top: 40px;
+  height: 80%;
+  border-radius: 25px;
+  max-width: 1240px;
+  margin: 0 auto;
+  position: relative;
+  img {
+    width: 100%;
+    height: 30vh;
+    border-radius: 25px;
+    margin-top: 40px;
+    object-fit: cover;
+  }
+  .arrowLeft {
+    position: absolute;
+    top: 105px;
+    left: 0px;
+    height: 78px;
+    width: 46px;
+    padding-left: 20px;
+    cursor: pointer;
+  }
+  .arrowRight {
+    position: absolute;
+    top: 105px;
+    right: 0px;
+    height: 78px;
+    width: 46px;
+    padding-right: 20px;
+    cursor: pointer;
+  }
+  .loc-container-left-right {
+    display: flex;
+    .loc-content-right {
+      width: 50%;
+      h2 {
+        color: #ff6060;
+        font-family: Montserrat;
+        font-size: 36px;
+        font-weight: 500;
+        margin: 10px 0 5px 0;
+      }
+      p {
+        color: #ff6060;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 142.6%; /* 25.668px */
+        margin: 0;
+      }
+      .container-tags {
+        display: flex;
+        gap: 10px;
+        .tags {
+          width: fit-content;
+          height: 25px;
+          background: #ff6060;
+          color: white;
+          border-radius: 10px;
+          text-align: center;
+          padding: 5px;
+        }
+      }
+    }
+    .loc-content-left {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      .host {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 20px;
+        h3 {
+          color: #ff6060;
+          text-align: right;
+          font-family: Montserrat;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 142.6%;
+        }
+        img {
+          width: 64px;
+          height: 64px;
+        }
+      }
+      .equipment{
+        h2 {
+          color: #ff6060;
+          font-family: Montserrat;
+          font-size: 36px;
+          font-weight: 500;
+          margin: 10px 0 5px 0;
+        }
+        li{
+          list-style: none;
+          color: #ff6060;
+        }
+      }
+    }
+  }
+}

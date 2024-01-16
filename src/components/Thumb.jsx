@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import locations from "../data/locations.json";
-console.log(locations);
+//console.log(locations);
 const Thumb = () => {
   const [data, setData] = useState([]);
 
@@ -12,9 +13,11 @@ const Thumb = () => {
   return (
     <>
       {data.map((location, index) => (
-        <div key={`${location}-${index}`} className="thumb">
-          <img src={location.cover} alt={location.title} />
-          <h2 key={`${location}-${index}`}>{location.title}</h2>
+        <div key={`routePaths${index}`} className="thumb">
+          <NavLink to={`/location/${location.id}`}>
+            <img src={location.cover} alt={location.title} />
+            <h2 key={`${location}-${index}`}>{location.title}</h2>
+          </NavLink>
         </div>
       ))}
     </>

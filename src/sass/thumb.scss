@@ -1,35 +1,39 @@
-.thumb{
-  background-color: #FF6060;
+.thumb {
+  background-color: #ff6060;
   width: 100%;
   height: 340px;
   flex-shrink: 0;
   border-radius: 10px;
-  background: linear-gradient(180deg, #FF6060 0%,#FF6060 100%);
+  background: linear-gradient(180deg, #ff6060 0%, #ff6060 100%);
   position: relative;
   cursor: pointer;
-  @media screen and (max-width:768px) {
+  @media screen and (max-width: 768px) {
     height: 255px;
-   }
-   img{
+  }
+  img {
     height: 100%;
     width: 100%;
     border-radius: 10px;
-   }
-  h2{
+  }
+  h2 {
     position: absolute;
+    height: 20%;
+    width: 100%;
+    margin: 0;
     bottom: 0;
     left: 0;
-    color: #FFF;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
     font-family: Montserrat;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
-    height: 20%;
-    width: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+
     background-color: rgba(0, 0, 0, 0.257);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 0 10px 10px;
   }
 }
