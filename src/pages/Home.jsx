@@ -1,14 +1,11 @@
-import Header from "../components/Header"
-import BannerImg from "../components/BannerImg"
-import Gallery from "../components/Gallery"
-import Footer from "../components/Footer"
+import BannerImg from "../components/BannerImg";
+import Gallery from "../components/Gallery";
+
 const Home = () => {
   return (
     <div className="home">
-      <Header/>
-      <BannerImg/> 
-      <Gallery/>
-      <Footer/>
+      <BannerImg />
+      <Gallery />
     </div>
   );
 };

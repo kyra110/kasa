@@ -1,16 +1,16 @@
-
 import BannerApropos from "../components/BannerApropos";
 import Collapsis from "../components/Collapsis";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import colapsJson from "../data/colaps.json";
 
 const About = () => {
   return (
     <div className="about">
-      <Header/>
-      <BannerApropos/> 
-      <Collapsis/>
-      <Footer/>
+      <BannerApropos />
+      {colapsJson.map((colaps, index) => (
+        <Collapsis key={index} index={index} title={colaps.title}>
+          {colaps.text}
+        </Collapsis>
+      ))}
     </div>
   );
 };
