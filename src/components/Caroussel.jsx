@@ -20,13 +20,20 @@ const handleNextClick = () => {
 };
 
 const currentSlide = slides[currentIndex];
+const numSlides = slides.length;
 
+// Vérifier si plus d'une slide est présente avant d'afficher les flèches
+const shouldShowArrows = numSlides > 1;
 
   return (
     <div className="caroussel">
        <img className="slider" src={currentSlide} alt={`Slide ${currentIndex + 1}`} />
+       {shouldShowArrows && (
+        <>
         <img className="arrowRight" src={arrowRight} alt="Flèche Droite" onClick={handleNextClick}/>
         <img className="arrowLeft" src={arrowLeft} alt="Flèche Gauche" onClick={handlePrevClick} />
+        </>
+       )}
         <div className="slide-indicator">{`${currentIndex + 1}/${slides.length}`}</div>
     </div>
   );
