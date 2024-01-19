@@ -32,10 +32,7 @@ const currentSlide = slides[currentIndex];
   );
 };
 Caroussel.propTypes = {
-  imgSlide : PropTypes.string.isRequired,
-  altSlide : PropTypes.string.isRequired,
   slides : PropTypes.arrayOf(PropTypes.string).isRequired,
-  
 };
 
 export default Caroussel;
