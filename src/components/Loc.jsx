@@ -1,4 +1,5 @@
-import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import locations from "../data/locations.json";
 import Tags from "./Tags";
 import Collapsis from "./Collapsis";
@@ -7,9 +8,19 @@ import Caroussel from "./Caroussel";
 
 const Loc = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const location = locations.find((item) => item.id === id);
 
-
+  useEffect(() => {
+    if (!location) {
+      navigate("/error");
+    }
+  }, [id, location, navigate]);
+    // Vérifiez si location est défini avant d'accéder à ses propriétés
+    if (!location) {
+      return null; // Ou affichez un composant d'erreur approprié
+    }
+    
   return (
     <>
       <div className="loc">
