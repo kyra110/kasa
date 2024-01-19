@@ -1,8 +1,8 @@
-/* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import { useState } from "react";
 import svgFleche from "../assets/images/arrow.svg";
+import PropTypes from "prop-types"
 
-const Collapsis = (props) => {
+const Collapsis = ({title,children}) => {
   const [isVisible, setIsVisible] = useState(false);
   const handleToggle = () => {
     setIsVisible(!isVisible);
@@ -11,7 +11,7 @@ const Collapsis = (props) => {
   return (
     <div className={`colapsis ${isVisible ? "visible" : ""}`}>
       <div className="headColapsis" onClick={handleToggle}>
-        <h3>{props.title}</h3>
+        <h3>{title}</h3>
         <img
           src={svgFleche}
           alt="flèche"
@@ -19,10 +19,15 @@ const Collapsis = (props) => {
         />
       </div>
       <div className={`paragraph ${isVisible ? "animate" : ""}`}>
-        {props.children}
+        {children}
       </div>
     </div>
   );
+};
+
+Collapsis.propTypes ={
+  title : PropTypes.string.isRequired,
+  children : PropTypes.node.isRequired,
 };
 
 export default Collapsis;
