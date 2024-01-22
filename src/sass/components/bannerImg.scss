@@ -1,4 +1,6 @@
 .banner{
+  margin: auto;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,7 +9,7 @@
   background: #F6F6F6;
   height: 223px;
   max-width: 1240px;
-  margin: 0 auto;
+  margin-bottom: 30px;
   @media screen and (max-width:1024px) {
     height: 200px;
   }
@@ -15,7 +17,6 @@
     height: 111px;
     border-radius: 10px;
     margin-bottom: 20px;
-    margin: 0;
    }
   .bannerImg{
     border-radius: 1.5625rem;
@@ -38,7 +39,6 @@
     font-size: 3rem;
     @media screen and (max-width:1024px) {
       font-size: 2.35rem;
-      margin-left: 30px;
     }
     @media screen and (max-width:768px) {
       display: flex;

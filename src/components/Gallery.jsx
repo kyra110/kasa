@@ -1,9 +1,11 @@
+
 import Thumb from "./Thumb";
+import locations from "../data/locations.json";
 
 const Gallery = () => {
   return (
     <div className="gallery">
-      <Thumb/>
+      <Thumb locations={locations}/>
     </div>
   );
 };

@@ -6,6 +6,10 @@ footer{
   justify-content: center;
   align-items: center;
   background: #000;
+  margin-top: 30px;
+  @media screen and (max-width:768px) {
+    margin-top: 0px;
+   }
   p{
     color: #FFF;
     text-align: center;

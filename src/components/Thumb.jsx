@@ -1,27 +1,30 @@
-import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import locations from "../data/locations.json";
-//console.log(locations);
-const Thumb = () => {
-  const [data, setData] = useState([]);
+import PropTypes from "prop-types";
 
-  useEffect(() => {
-    // Utilisez la fonction setData pour mettre à jour l'état
-    setData(locations);
-  }, []);
+const Thumb = ({ locations }) => {
 
   return (
     <>
-      {data.map((location, index) => (
-        <div key={`routePaths${index}`} className="thumb">
+      {locations.map((location) => (
+        <div key={`routePaths${location.id}`} className="thumb">
           <NavLink to={`/location/${location.id}`}>
             <img src={location.cover} alt={location.title} />
-            <h2 key={`${location}-${index}`}>{location.title}</h2>
+            <h2 key={`${location.id}`}>{location.title}</h2>
           </NavLink>
         </div>
       ))}
     </>
   );
 };
+
+Thumb.propTypes = {
+  locations: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      cover: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+}
 
 export default Thumb;
