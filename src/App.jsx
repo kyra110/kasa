@@ -5,14 +5,15 @@ import Error from "./pages/Error";
 import Location from "./pages/Location";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
+  const basename = import.meta.env.MODE === "production" ? "/kasa/" : "";
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+      <Route path="/" element={<Navigate to="/Accueil" replace />} />
         <Route path="/Accueil" element={<Home />} />
         <Route path="/location/:id" element={<Location />} />
         <Route path="/Apropos" element={<About />} />
