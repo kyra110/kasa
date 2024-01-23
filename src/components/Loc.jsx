@@ -39,7 +39,7 @@ const Loc = () => {
             <div className="hostRating">
               <div className="host">
                 <h3>{location.host.name}</h3>
-                <img src={location.host.picture} alt="photo de l'hébergeur" />
+                <img src={location.host.picture} alt={location.title} />
               </div>
               <div className="rating">
                 <Rating rating = {parseInt(location.rating,10)}/>

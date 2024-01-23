@@ -4,10 +4,12 @@ const BannerImg = () => {
     <div className="banner">
       <img src={img} alt="montagnes" className="bannerImg" />
       <div className="mask"></div>
-      <h1>
-        <p>Chez vous,</p>
-        <p>partout et ailleurs</p>
-      </h1>
+      
+        <h1>Chez vous,
+        partout et ailleurs
+        </h1>
+       
+      
     </div>
   );
 };
