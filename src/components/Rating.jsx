@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
-import { FaStar } from "react-icons/fa6";
+import starFull from "../assets/images/starFull.svg";
+import starEmpty from "../assets/images/starGrey.svg";
 
 const Rating = ({ rating }) => {
   const totalStars = 5;
@@ -8,13 +9,12 @@ const Rating = ({ rating }) => {
   let starsEmpty = [];
 
   for (let index = 0; index < rating; index++) {
-    starsFull.push(<FaStar key={index} className="stars" />);
+    starsFull.push(<img className="stars" key={index} src={starFull} alt="Full Star" />);
   }
 
-  for (let index = 0; index < (totalStars-rating); index++) {
-    starsEmpty.push(<FaStar key={index} className="starsGrey"/>);
+  for (let index = 0; index < (totalStars - rating); index++) {
+    starsEmpty.push(<img className="starsGrey" key={index} src={starEmpty} alt="Empty Star" />);
   }
-  
 
   return (
     <>

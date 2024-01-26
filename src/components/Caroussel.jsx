@@ -6,16 +6,16 @@ import { useState } from 'react';
 
 
 const Caroussel = ({slides}) => {
-
-
 // slides et un tableau qui contient le lien pour chaque image du caroussel
 const [currentIndex, setCurrentIndex] = useState(0);
 
 const handlePrevClick = () => {
+  //si l'index est égal à 0, on passe à la dernière slide
   setCurrentIndex((prevIndex) => (prevIndex === 0 ? slides.length - 1 : prevIndex - 1));
 };
 
 const handleNextClick = () => {
+  //si l'index est égal à la dernière slide, on passe à la première
   setCurrentIndex((prevIndex) => (prevIndex === slides.length - 1 ? 0 : prevIndex + 1));
 };
 

@@ -144,16 +144,16 @@
         }
         .stars {
           color: #ff6060;
-          font-size: 36px;
+          height: 36px;
           @media screen and (max-width: 768px) {
-            font-size: 18px;
+            height: 18px;
           }
         }
         .starsGrey {
           color: #e3e3e3;
-          font-size: 36px;
+          height: 36px;
           @media screen and (max-width: 768px) {
-            font-size: 18px;
+            height: 18px;
           }
         }
       }
